@@ -1,0 +1,156 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo e tipografia */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #d4d4d4, #3c5455);
+  min-height: 100vh;
+  color: #2c1515;
+}
+
+/* Container principal */
+.container {
+  width: 85%;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Títulos */
+h2 {
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 1.8rem;
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #000000;
+  outline: none;
+  box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+}
+
+/* Botões gerais */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #4facfe;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #013063;
+  transform: scale(1.05);
+}
+
+/* Botão limpar */
+button.limpar {
+  background: #4dff9d;
+}
+
+button.limpar:hover {
+  background: #cc0000;
+}
+
+/* Cabeçalho da lista */
+.lista-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #4facfe;
+  color: #fff;
+  padding: 12px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Linhas de venda */
+.linha-venda {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 12px 10px;
+  margin-top: 8px;
+  background: #ffffff;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.linha-venda:hover {
+  background: #96bee5;
+  transform: scale(1.01);
+}
+
+/* Botão excluir nas linhas */
+.linha-venda button {
+  background: #ff4d4d;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.linha-venda button:hover {
+  background: #cc0000;
+}
+
+/* Mensagem vazio */
+.vazio {
+  text-align: center;
+  padding: 25px;
+  margin-top: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+  .lista-header,
+  .linha-venda {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .lista-header div,
+  .linha-venda div {
+    font-size: 12px;
+    padding: 6px 4px;
+  }
+
+  button {
+    flex: 1;
+  }
+}

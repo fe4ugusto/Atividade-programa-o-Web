@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Vendas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h2>Cadastro de Vendas</h2>
+
+    <div class="form">
+      <input type="text" id="vendedor" placeholder="Nome do vendedor">
+      <input type="number" id="valor" placeholder="Valor da venda">
+      <button onclick="adicionarVenda()">Cadastrar</button>
+      <button onclick="limparVendas()">Limpar Tudo</button>
+    </div>
+
+    <h2>Lista de Vendas</h2>
+
+
+    <div class="lista-header">
+      <div>ID</div>
+      <div>Vendedor</div>
+      <div>Valor</div>
+      <div>Desconto</div>
+      <div>Total</div>
+      <div>Data</div>
+      <div>Ações</div>
+    </div>
+
+   
+    <div id="tabelaVendas" class="lista-vendas"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
