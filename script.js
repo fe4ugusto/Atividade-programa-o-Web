@@ -48,7 +48,7 @@ function adicionarVenda() {
     const vendedor = vendedorInput.value.trim();
     const valor = parseFloat(valorInput.value);
 
-    // Validação se esta preenchido
+    // Validação se está preenchido
     if (vendedor === '' || isNaN(valor)) {
         alert('Preencha todos os campos corretamente!');
         return;
@@ -63,10 +63,9 @@ function adicionarVenda() {
     const total = valor - desconto;
 
     // data
-    
     const data = new Date().toLocaleString();
 
-    // criacaoçao do objeto venda
+    // criação do objeto venda
     const venda = {
         id: idAtual++,
         vendedor: vendedor,
@@ -84,7 +83,7 @@ function adicionarVenda() {
     valorInput.value = '';
     vendedorInput.focus();
 
-    // Atualiza tebela
+    // Atualiza tabela
     atualizarTabela();
 }
 
@@ -111,6 +110,7 @@ function limparVendas() {
 
     if (confirm('Deseja apagar todas as vendas?')) {
         vendas = [];
+        idAtual = 1; // <-- reseta o contador de IDs
         atualizarTabela();
     }
 }
